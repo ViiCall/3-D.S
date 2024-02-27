@@ -1,0 +1,33 @@
+def le_numero(frase_para_usuario):
+  while True:
+    numero = input(frase_para_usuario)
+    try:
+      numero = int(numero)
+      break
+    except:
+      print("Não é um número válido!") 
+  return numero
+
+def calculadora():
+  print("calculadora")
+  primeiro_numero = le_numero("digite o primeiro numero: ")
+  
+  while True:
+    operacao = input("digite a operação:  ")    
+    if operacao == "+" or  operacao == "-" or operacao == "*" or operacao == "/":  
+        break
+  segundo_numero = le_numero("digite o segundo numero: ")
+  
+  if operacao == '+':
+    resultado = primeiro_numero + segundo_numero
+  if operacao == '-':
+    resultado = primeiro_numero - segundo_numero
+  if operacao == '*':
+    resultado = primeiro_numero * segundo_numero
+  if operacao == '/':
+    resultado = primeiro_numero / segundo_numero
+
+  print(resultado)
+  
+if __name__ == "__main__":
+  calculadora()
